@@ -88,10 +88,10 @@ class Trainer:
         with open(self.log_dir / 'config.yaml', 'w') as f:
             f.write(tyro.to_yaml(self.config))
         wandb.init(
-            project="NeRMF_2",
+            project="NeRMF_3",
             name=f'{self.config.exp_name}_{self.config.scene_name}',
             group=self.config.exp_name,
-            notes="NeRMF_2 for eccv",
+            notes="NeRMF_3",
             config=asdict(self.config),
             resume="allow",
             id=str(self.log_dir).replace("/", "_")
